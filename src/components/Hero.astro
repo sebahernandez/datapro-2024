@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
+import sqlImage from "../assets/icon-sql.webp";
+import Button from "../components/Button.astro";
+import bgSql from "../assets/bg-sql.webp";
+
+const optimizedBackground = await getImage({
+  src: bgSql,
+  format: "webp",
+  width: 200,
+  height: 200,
+});
+
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle} = Astro.props
+---
+
+<section
+style={`background-image: url(${optimizedBackground.src});`}
+class="section-bg py-10 md:py-[100px]"
+>
+<div class="flex flex-col justify-center items-center">
+  <Image src={sqlImage} alt="Sql" />
+  <h2 class="text-4xl font-bold text-center text-blue-950 md:text-6xl">
+    {title}
+  </h2>
+  <span class="text-sm text-center text-blue-950 md:text-2xl md:py-2">
+    {subtitle}
+  </span>
+  <div class="pt-5">
+    <Button title="Ver planes SQL Server" />
+  </div>
+</div>
+</section>
+
+
+<style>
+    .title {
+      color: #113666;
+    }
+    .section-bg {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>

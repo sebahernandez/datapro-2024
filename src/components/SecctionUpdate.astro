@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro"
+import Lupa from "../assets/lupa.webp"
+
+interface Props {
+    title: string;
+    description: string;
+    color: string;
+}
+
+const {title, description, color} = Astro.props;
+---
+
+<section class="container my-10 mr-0 md:ml-10 px-5 md:px-0">
+    <div class="bg-violet-100 w-full rounded-md p-10 relative">
+        <h2 class="text-2xl font-bold md:text-5xl md:pr-48 text-purple-800">{title}</h2>
+        <p class="py-2 text-pretty">{description}</p>
+        <Button title="¡Quiero mi sitio WordPress ahora!" color="rgb(107 33 168)" />
+    </div>
+</section>

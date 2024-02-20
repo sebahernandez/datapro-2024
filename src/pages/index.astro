@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Secction from "../components/Secction.astro";
+import copilot from "../assets/copilot.webp";
+import SecctionShopify from "../components/SecctionShopify.astro";
+import SecctionWordpress from "../components/SecctionWordpress.astro";
+import SecctionUpdate from "../components/SecctionUpdate.astro";
+---
+
+<Layout
+  title="Datapro Licencias Microsoft 365 - Copilot - Desarrollo web - Ecommerce"
+>
+  <Hero
+    title="Licencias Microsoft SQL Server 2022"
+    subtitle="Con su licencia SQL Server 2022 puedes realizar un downgrade a SQL Server 2019"
+  />
+
+  <Secction
+    title="Colabore y comparta información utilizando Microsoft 365"
+    subtitle="Mejore la productividad de su equipo de trabajo, automatice tareas y procesos para ahorrar tiempo y esfuerzo."
+    alt="Microsoft Copilot"
+    imageSrc={copilot}
+    topMessage="¡Ahora puedes integrar Microsoft Copilot!"
+  />
+
+  <SecctionShopify title="Tiendas en linea con Shopify" subtitle="Comience a atraer más clientes y aumente sus ganancias con Shopify" />
+
+  <div class=" flex flex-col md:flex-row container mx-auto">
+    <SecctionWordpress title="Desarrollamos su sitio web en WordPress" description="Destaque su negocio en línea con nosotros. Desde sitios web profesionales hasta SEO optimizado y campañas de publicidad online, hagamos que su negocio brille en la web."/>
+   <SecctionUpdate title="Administramos y mantenemos tu web actualizada" description="Si no tiene tiempo de actualizar su web, entonces somos la mejor alternativa para hacerlo hoy."/>
+  </div>
+</Layout>
+
+<style>
+  .title {
+    color: #113666;
+  }
+  .section-bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+
+interface pros {
+  title: string;
+  subtitle: string;
+  topMessage: string;
+  imageSrc: string;
+  alt: string;
+}
+
+const { title, subtitle, imageSrc, alt,topMessage } = Astro.props;
+---
+
+<section class="pb-20 md:py-10">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 ">
+    <div class="flex justify-center items-center">
+      {/* Asegúrate de reemplazar Image por tu componente de imagen o una etiqueta img si es necesario */}
+      <Image class="w-[250px] md:w-[490px]" src={imageSrc} alt={alt} />
+    </div>
+    <div class="flex flex-col justify-center items-center md:items-start">
+      <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded md:text-sm">
+        {topMessage}
+      </span>
+      <h2 class="text-center text-2xl pb-2 font-bold text-blue-950 my-2 md:text-5xl md:text-left md:leading-normal">
+        {title}
+      </h2>
+      <p class="text-center text-sm text-blue-950 md:text-left md:text-xl">
+        {subtitle}
+      </p>
+      <div class="pt-5">
+        {/* Asume que Button es un componente; reemplázalo con un elemento adecuado si es necesario */}
+        <Button title="Ver planes Microsoft 365" />
+      </div>
+    </div>
+  </div>
+</section>
+
+

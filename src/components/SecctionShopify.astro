@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Button from "./Button.astro"
+import Shopify from "../assets/shopify-2023-home2.webp";
+
+interface props{
+    title: string
+    subtitle:string
+}
+
+const {title, subtitle} = Astro.props
+---
+
+<section>
+    <div class="mb-10 px-5">
+        <div class="container mx-auto bg-emerald-100 rounded-xl py-24">
+            <div class="flex flex-col items-center justify-center">
+                <Image src={Shopify} alt="Shopify" class="w-[200px] md:w-[350px]" />
+                <h2 class="text-4xl font-bold text-emerald-800 text-center leading-tight text-pretty px-2 md:text-6xl">
+                 {title}
+                <p class="text-emerald-700 text-center text-sm text-pretty px-5 md:text-xl leading-normal">{subtitle}</p>
+            </div>
+            <div class="flex flex-col justify-center items-center mt-8">
+              <Button title="Cotice ahora su tienda"/>
+            </div>
+        </div>
+    </div>
+</section>
