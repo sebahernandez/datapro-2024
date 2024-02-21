@@ -1,0 +1,170 @@
+---
+import { Image } from "astro:assets";
+import copilot from "../../assets/copilot.webp";
+import Layout from "../../layouts/Layout.astro";
+import Secction from "../../components/Secction.astro";
+import Pricing from "../../components/Pricing.astro";
+import Questions from "../../components/Questions.astro";
+import teamsImage from "../../assets/teams.png";
+import editorImage from "../../assets/editor.png";
+import office from "../../assets/office365.png";
+import Cloud from "../../assets/cloud.png";
+import OnedriveImage from "../../assets/onedrive.png";
+import Security from "../../assets/Security.png";
+
+// Crear un array de objetos con información sobre las imágenes
+const images = {
+  Teams: {
+    src: teamsImage,
+    alt: "Teams",
+    description: "Microsoft Teams, una herramienta de colaboración en línea...",
+  },
+  Editor: {
+    src: editorImage,
+    alt: "Editor",
+    description:
+      "El editor de Microsoft es una herramienta de procesamiento de textos...",
+  },
+  Office: {
+    src: office,
+    alt: "Cloud",
+    description:
+      "La nueva app móvil de Microsoft Office 365 combina Word, Excel y PowerPoint...",
+  },
+
+  Cloud: {
+    src: Cloud,
+    alt: "Cloud",
+    description:
+      "La nueva app móvil de Microsoft Office 365 combina Word, Excel y PowerPoint...",
+  },
+
+  Drive: {
+    src: OnedriveImage,
+    alt: "Cloud",
+    description:
+      "La nueva app móvil de Microsoft Office 365 combina Word, Excel y PowerPoint...",
+  },
+
+  Security: {
+    src: Security,
+    alt: "Cloud",
+    description:
+      "La nueva app móvil de Microsoft Office 365 combina Word, Excel y PowerPoint...",
+  },
+};
+---
+
+<Layout
+  title="Datapro Licencias Microsoft 365 - Copilot - Desarrollo web - Ecommerce"
+>
+  <Secction
+    title="Optimice el rendimiento de su empresa con Microsoft 365"
+    subtitle="Licencias Microsoft Office 365 al mejor precio, ahorra dinero y aumente la productividad de su equipo."
+    alt="Microsoft 365"
+    imageSrc={copilot}
+    topMessage="Ahora puede integrar Microsoft Copilot"
+  />
+
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+   
+      <div
+        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+      >
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Teams.src} alt={images.Teams.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold">Teams</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Microsoft Teams, una herramienta de colaboración en línea, permite
+            charlar en tiempo real, realizar llamadas y compartir archivos desde
+            cualquier lugar del mundo.
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Editor.src} alt={images.Editor.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Editor</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            El editor de Microsoft es una herramienta de procesamiento de textos
+            que permite crear y editar documentos de manera eficiente.
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Office.src} alt={images.Office.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">App Móvil</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            App Móvil La nueva app móvil de Microsoft Office 365 combina Word,
+            Excel y PowerPoint, con características exclusivas para aumentar la
+            productividad en teléfonos y tabletas. Es tu herramienta preferida
+            en dispositivos móviles.
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Cloud.src} alt={images.Cloud.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">
+            Copia de seguridad One Drive
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Respalda tus fotos y archivos desde diferentes dispositivos
+            guardando tus documentos de Office en OneDrive. Con el Autoguardado
+            habilitado, tus archivos se guardarán automáticamente, evitando
+            pérdidas.
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Drive.src} alt={images.Drive.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">
+            Almacén personal de OneDrive
+          </h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Protege tus archivos y fotos más importantes al utilizar la
+            verificación de identidad en dos pasos. Esta medida de seguridad
+            adicional garantiza una protección robusta. Asegúrate de implementar
+            este método para obtener un nivel adicional de protección para tus
+            archivos y fotos clave.
+          </p>
+        </div>
+        <div>
+          <div
+            class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+          >
+            <Image src={images.Security.src} alt={images.Security.alt} />
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Seguridad</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Mantén tus documentos seguros ante posibles ataques digitales
+            gracias a la sólida seguridad en línea y las funciones avanzadas de
+            Microsoft 365. Con un enfoque centrado en la protección de datos y
+            la defensa contra amenazas cibernéticas, Microsoft 365 te brinda la
+            tranquilidad y confianza necesarias en la seguridad de tu
+            información.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <Pricing />
+  <Questions />
+</Layout>

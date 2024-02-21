@@ -1,0 +1,169 @@
+---
+import Button from "./Button.astro"
+
+const planBasic = {
+    title: "Microsoft 365 Business Basic",
+    description: "Aplicaciones y servicios incluidos",
+    features: [
+        "Versiones solo web de las aplicaciones de Microsoft Office 365.",
+        "Alojamiento de correo electrónico con buzón de 50 GB.",
+        "Chatea, llama, reúnete con hasta 300 asistentes.",
+        "Concentrador de trabajo en equipo con Microsoft Teams.",
+        "Administrador de tareas con Microsoft Planner.",
+        "Asistencia telefónica y web en cualquier momento.",
+        "1 TB de almacenamiento en la nube OneDrive por usuario."
+    ]
+}
+
+const planBusiness = {
+    title: "Microsoft 365 Apps for business",
+    description: "Aplicaciones y servicios incluidos",
+    features: [
+        "Versiones web y de escritorio de las aplicaciones de Microsoft Office 365.",
+        "Cada usuario puede instalar las aplicaciones de Office en hasta 5 PC o Mac.",
+        "Asistencia telefónica y web en cualquier momento.",
+        "Seguridad estándar.",
+        "1 TB de almacenamiento en la nube OneDrive por usuario."
+    ]
+}
+
+const planStandard = {
+    title: "Microsoft 365 Business Standard",
+    description: "Aplicaciones y servicios incluidos",
+    features: [
+        "Versiones web y de escritorio de las aplicaciones de Microsoft Office 365.",
+        "Cada usuario puede instalar las aplicaciones de Office en hasta 5 PC o Mac.",
+        "Alojamiento de correo electrónico con buzón de 50 GB.",
+        "Chatea, llama, reúnete con hasta 300 asistentes.",
+        "Administrador de tareas con Microsoft Planner.",
+        "Asistencia telefónica y web en cualquier momento.",
+        "1 TB de almacenamiento en la nube OneDrive por usuario."
+    ]
+}
+
+const planPremium = {
+    title: "Microsoft 365 Business Premium",
+    description: "Aplicaciones y servicios incluidos",
+    features: [
+        "Seguridad avanzada.",
+        "Acceso y control de datos.",
+        "Protección contra ciber-amenazas.",
+        "1 TB de almacenamiento en la nube OneDrive por usuario."
+    ]
+}
+---
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Planes Microsoft 365</h2>
+            <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        </div>
+        <div class="space-y-8 lg:grid lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="mb-4 text-2xl font-semibold">{planBasic.title}</h3>
+               
+                <!-- <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-extrabold">$29</span>
+                    <span class="text-gray-500 dark:text-gray-400">/month</span>
+                </div> -->
+                <Button>
+                    COMPRAR AHORA
+                </Button>
+                <p>{planBasic.description}</p>
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left py-10" id="features">
+                   {
+                        planBasic.features.map((feature) => (
+                        <li class="flex items-start space-x-3">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>{feature}</span>
+                       </li>
+                        ))
+                    
+                   }
+                </ul>
+              
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="mb-4 text-2xl font-semibold">{planBusiness.title}</h3>
+               
+                <!-- <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-extrabold">$29</span>
+                    <span class="text-gray-500 dark:text-gray-400">/month</span>
+                </div> -->
+                <Button>
+                    COMPRAR AHORA
+                </Button>
+                <p>{planBusiness.description}</p>
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left py-10">
+                    {
+                        planBusiness.features.map((feature) => (
+                        <li class="flex items-start space-x-3">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>{feature}</span>
+                       </li>
+                        ))
+                    
+                   }
+                </ul>
+              
+            </div>
+            <!-- Pricing Card -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="mb-4 text-2xl font-semibold">{planStandard.title}</h3>
+               
+                <!-- <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-extrabold">$29</span>
+                    <span class="text-gray-500 dark:text-gray-400">/month</span>
+                </div> -->
+                <Button>
+                    COMPRAR AHORA
+                </Button>
+                <p>{planStandard.description}</p>
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left py-10">
+                    {
+                        planStandard.features.map((feature) => (
+                        <li class="flex items-start space-x-3">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>{feature}</span>
+                       </li>
+                        ))
+                    
+                   }
+                </ul>
+              
+            </div>
+
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="mb-4 text-2xl font-semibold">{planPremium.title}</h3>
+               
+                <!-- <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-extrabold">$29</span>
+                    <span class="text-gray-500 dark:text-gray-400">/month</span>
+                </div> -->
+                <Button>
+                    COMPRAR AHORA
+                </Button>
+                <p>{planPremium.description}</p>
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left py-10">
+                    {
+                        planPremium.features.map((feature) => (
+                        <li class="flex items-start space-x-3">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span>{feature}</span>
+                       </li>
+                        ))
+                    
+                   }
+                </ul>
+              
+            </div>
+        </div>
+    </div>
+  </section>

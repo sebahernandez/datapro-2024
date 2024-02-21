@@ -15,7 +15,9 @@ const {title, description} = Astro.props;
     <div class="bg-blue-200 w-full rounded-md p-10 relative">
         <h2 class="text-2xl font-bold md:text-5xl md:pr-48 text-indigo-900">{title}</h2>
         <p class="py-2 text-pretty">{description}</p>
-        <Button title="¡Quiero mi sitio WordPress ahora!" color="rgb(49 46 129)" />
+        <Button color="rgb(49 46 129)" >
+            Quiero mi sitio web WordPress
+        </Button>
         <Image class="w-[300px] hidden md:block md:absolute -top-10 -right-5" src={Lupa} alt="WordPress" />
     </div>
 </section>
